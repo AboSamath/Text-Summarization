@@ -1,10 +1,9 @@
 import streamlit as st
-from keras.models import load_model
 from PIL import Image
 import base64
 
 
-from utils import summarizer_lexrank, summarizer_textrank, summarizer, summarizer_lsa
+from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa
 
 def set_background(image_file):
     with open(image_file, "Slide01") as f:
@@ -27,9 +26,6 @@ st.title("Application de Summarization")
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
 texte_utilisateur = st.text_area("Entrez le texte à résumer", "")
 
-if st.button("Résumer Modèle TextSummarizer"):
-    resultat = summarizer(texte_utilisateur)
-    st.write("Résumé (TextSummarizer):", resultat)
 
 if st.button("Résumer Modèle TextRankSummarizer"):
     resultat = summarizer_textrank(texte_utilisateur)
