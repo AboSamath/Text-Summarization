@@ -21,7 +21,7 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 
 def background(image_file):
-    with open(image_file, "back") as f:
+    with open(image_file, "rb") as f:
         img_data = f.read()
 
     b64_encoded = base64.b64encode(img_data).decode()
