@@ -71,7 +71,8 @@ with col2:
         #st.write("Votre resumé (LSA):", resultat)
 
 
+
 st.markdown("Votre résumé :")
 
-st.text_input(resultat)
+st.text_area(resultat)
 
