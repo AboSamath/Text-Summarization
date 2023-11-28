@@ -65,9 +65,9 @@ st.markdown(
     f"""
     <style>
         div[data-baseweb="button"] #{button_key1} {{
-            width: 200px;  /* Ajustez la largeur selon vos besoins */
-            height: 60px;  /* Ajustez la hauteur selon vos besoins */
-            font-size: 20px;  /* Ajustez la taille de la police selon vos besoins */
+            width: 500px;  /* Ajustez la largeur selon vos besoins */
+            height: 90px;  /* Ajustez la hauteur selon vos besoins */
+            font-size: 50px;  /* Ajustez la taille de la police selon vos besoins */
         }}
     </style>
     """,
@@ -78,9 +78,9 @@ st.markdown(
     f"""
     <style>
         div[data-baseweb="button"] #{button_key2} {{
-            width: 200px;  /* Ajustez la largeur selon vos besoins */
-            height: 60px;  /* Ajustez la hauteur selon vos besoins */
-            font-size: 20px;  /* Ajustez la taille de la police selon vos besoins */
+            width: 500px;  /* Ajustez la largeur selon vos besoins */
+            height: 90px;  /* Ajustez la hauteur selon vos besoins */
+            font-size: 50px;  /* Ajustez la taille de la police selon vos besoins */
         }}
     </style>
     """,
