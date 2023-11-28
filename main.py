@@ -6,14 +6,14 @@ import base64
 from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa
 
 def set_background(image_file):
-    with open(image_file, "Slide01") as f:
+    with open(image_file, "bg") as f:
         img_data = f.read()
 
     b64_encoded = base64.b64encode(img_data).decode()
     style = f"""
         <style>
         .stApp {{
-            background-image: url(data:image/jpg;base64,{b64_encoded});
+            background-image: url(data:./jpg;base64,{b64_encoded});
             background-size: cover;
         }}
         </style>

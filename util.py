@@ -72,3 +72,4 @@ def summarizer_lsa(text, num_sentences=5):
     # Afficher le summary
     return text_summary
 
+
