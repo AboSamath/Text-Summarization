@@ -18,6 +18,8 @@ st.header('Please input your text and choose the language !')
 
 texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
 
+resultat = ""
+
 # Choisir la langue
 #selected_language = st.selectbox("Please choose your language", ["English", "French"])
 
