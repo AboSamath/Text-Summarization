@@ -20,6 +20,21 @@ from sumy.summarizers.lsa import LsaSummarizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 
+def background(image_file):
+    with open(image_file, "back") as f:
+        img_data = f.read()
+
+    b64_encoded = base64.b64encode(img_data).decode()
+    style = f"""
+        <style>
+        .stApp {{
+            background-image: url(data:./jpg;base64,{b64_encoded});
+            background-size: cover;
+        }}
+        </style>
+    """
+    st.markdown(style, unsafe_allow_html=True)
+
 texte_utilisateur = ""
 
 # Créer un text parser utilisant de tokenisation
