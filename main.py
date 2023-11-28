@@ -10,20 +10,22 @@ from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summar
 background('./back.jpg')
 
 
-st.title("Summarization Application | Application de résumé")
+st.title("Summarization Application")
 
 st.markdown("This application is designed to help you get a fast, reliable summary of your text in English or French.")
 
-st.header('Please choose your text language / Merci de choisir la langue de votre texte svp !')
+st.header('Please choose your text language !')
 
 
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
 col1, col2 = st.columns(2)
 
+# Définir une clé pour le bouton
+button_key = "mon_bouton"
 
 
 with col1:
-    if st.button("English"):
+    if st.button("English", key=button_key):
         texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
         if st.button("NLTK MODEL"):
             resultat = summarizer_nltk(texte_utilisateur)
@@ -41,7 +43,7 @@ with col1:
             st.write("Your resume (LSA):", resultat)
 
 with col2:
-    if st.button("French"):
+    if st.button("French", key=button_key):
         texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
         if st.button("MODELE NLTK"):
             resultat = french_summarizer_nltk(texte_utilisateur)
@@ -57,3 +59,16 @@ with col2:
         if st.button("MODELE LSA"):
             resultat = french_summarizer_lsa(texte_utilisateur)
             st.write("Votre resumé (LSA):", resultat)
+
+st.markdown(
+    f"""
+    <style>
+        div[data-baseweb="button"] #{button_key} {{
+            width: 200px;  /* Ajustez la largeur selon vos besoins */
+            height: 60px;  /* Ajustez la hauteur selon vos besoins */
+            font-size: 20px;  /* Ajustez la taille de la police selon vos besoins */
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
