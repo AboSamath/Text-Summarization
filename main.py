@@ -31,6 +31,7 @@ with col1:
         if st.button("NLTK MODEL"):
             resultat = summarizer_nltk(texte_utilisateur)
             st.write("Your resume (NLTK):", resultat)
+
         if st.button("TEXT_RANK MODEL"):
             resultat = summarizer_textrank(texte_utilisateur)
             st.write("Your resume (TextRank):", resultat)
@@ -49,6 +50,7 @@ with col2:
         if st.button("MODELE NLTK"):
             resultat = french_summarizer_nltk(texte_utilisateur)
             st.write("Votre resumé (NLTK):", resultat)
+            
         if st.button("MODELE TEXT_RANK"):
             resultat = french_summarizer_textrank(texte_utilisateur)
             st.write("Votre resumé (TextRank):", resultat)
