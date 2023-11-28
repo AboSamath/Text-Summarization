@@ -16,18 +16,17 @@ st.markdown("This application is designed to help you get a fast, reliable summa
 
 st.header('Please choose your text language !')
 
+# Choisir la langue
+#selected_language = st.selectbox("Please choose your language", ["English", "French"])
 
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
 col1, col2 = st.columns(2)
 
-# Définir une clé pour le bouton
-button_key1 = "mon_bouton1"
-button_key2 = "mon_bouton2"
+texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
 
 
 with col1:
     if st.button("English", use_container_width=True):
-        texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
         if st.button("NLTK MODEL"):
             resultat = summarizer_nltk(texte_utilisateur)
             st.write("Your resume (NLTK):", resultat)
@@ -46,11 +45,10 @@ with col1:
 
 with col2:
     if st.button("French", use_container_width=True):
-        texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
         if st.button("MODELE NLTK"):
             resultat = french_summarizer_nltk(texte_utilisateur)
             st.write("Votre resumé (NLTK):", resultat)
-            
+
         if st.button("MODELE TEXT_RANK"):
             resultat = french_summarizer_textrank(texte_utilisateur)
             st.write("Votre resumé (TextRank):", resultat)
