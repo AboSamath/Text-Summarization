@@ -21,11 +21,12 @@ st.header('Please choose your text language !')
 col1, col2 = st.columns(2)
 
 # Définir une clé pour le bouton
-button_key = "mon_bouton"
+button_key1 = "mon_bouton1"
+button_key2 = "mon_bouton2"
 
 
 with col1:
-    if st.button("English", key=button_key):
+    if st.button("English", key=button_key1):
         texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
         if st.button("NLTK MODEL"):
             resultat = summarizer_nltk(texte_utilisateur)
@@ -43,7 +44,7 @@ with col1:
             st.write("Your resume (LSA):", resultat)
 
 with col2:
-    if st.button("French", key=button_key):
+    if st.button("French", key=button_key2):
         texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
         if st.button("MODELE NLTK"):
             resultat = french_summarizer_nltk(texte_utilisateur)
@@ -63,7 +64,20 @@ with col2:
 st.markdown(
     f"""
     <style>
-        div[data-baseweb="button"] #{button_key} {{
+        div[data-baseweb="button"] #{button_key1} {{
+            width: 200px;  /* Ajustez la largeur selon vos besoins */
+            height: 60px;  /* Ajustez la hauteur selon vos besoins */
+            font-size: 20px;  /* Ajustez la taille de la police selon vos besoins */
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f"""
+    <style>
+        div[data-baseweb="button"] #{button_key2} {{
             width: 200px;  /* Ajustez la largeur selon vos besoins */
             height: 60px;  /* Ajustez la hauteur selon vos besoins */
             font-size: 20px;  /* Ajustez la taille de la police selon vos besoins */
