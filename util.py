@@ -185,7 +185,7 @@ def french_summarizer_nltk(texte_utilisateur, num_sentences=5):
 
     # Afficher le résumé
 
-    return summary_sentences_french
+    return summary
 
 def french_summarizer_textrank(texte_utilisateur, num_sentences=5):
 # Initialiser le modèle
