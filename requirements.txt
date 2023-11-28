@@ -7,7 +7,5 @@ tensorflow
 bs4
 BeautifulSoup4
 requests
-re
 nltk
 sumy
-util
