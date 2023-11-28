@@ -26,7 +26,7 @@ button_key2 = "mon_bouton2"
 
 
 with col1:
-    if st.button("English", key=button_key1):
+    if st.button("English"):
         texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
         if st.button("NLTK MODEL"):
             resultat = summarizer_nltk(texte_utilisateur)
@@ -44,7 +44,7 @@ with col1:
             st.write("Your resume (LSA):", resultat)
 
 with col2:
-    if st.button("French", key=button_key2):
+    if st.button("French"):
         texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
         if st.button("MODELE NLTK"):
             resultat = french_summarizer_nltk(texte_utilisateur)
@@ -61,28 +61,5 @@ with col2:
             resultat = french_summarizer_lsa(texte_utilisateur)
             st.write("Votre resumé (LSA):", resultat)
 
-st.markdown(
-    f"""
-    <style>
-        div[data-baseweb="button"] #{button_key1} {{
-            width: 500px;  /* Ajustez la largeur selon vos besoins */
-            height: 90px;  /* Ajustez la hauteur selon vos besoins */
-            font-size: 50px;  /* Ajustez la taille de la police selon vos besoins */
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
-st.markdown(
-    f"""
-    <style>
-        div[data-baseweb="button"] #{button_key2} {{
-            width: 500px;  /* Ajustez la largeur selon vos besoins */
-            height: 90px;  /* Ajustez la hauteur selon vos besoins */
-            font-size: 50px;  /* Ajustez la taille de la police selon vos besoins */
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
