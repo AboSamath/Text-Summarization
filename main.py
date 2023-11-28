@@ -10,41 +10,50 @@ from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summar
 background('./back.jpg')
 
 
-st.title("Summarization Application")
+st.title("Summarization Application | Application de résumé")
+
+st.markdown("This application is designed to help you get a fast, reliable summary of your text in English or French.")
+
+st.header('Please choose your text language / Merci de choisir la langue de votre texte svp !')
+
 
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
+col1, col2 = st.columns(2)
 
 
-if st.button("English"):
-    texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
-    if st.button("NLTK MODEL"):
-        resultat = summarizer_nltk(texte_utilisateur)
-        st.write("Your resume (NLTK):", resultat)
-    if st.button("TEXT_RANK MODEL"):
-        resultat = summarizer_textrank(texte_utilisateur)
-        st.write("Your resume (TextRank):", resultat)
 
-    if st.button("LEX_RANK MODEL"):
-        resultat = summarizer_lexrank(texte_utilisateur)
-        st.write("Your Resume (LexRank):", resultat)
+with col1:
+    if st.button("English"):
+        texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
+        if st.button("NLTK MODEL"):
+            resultat = summarizer_nltk(texte_utilisateur)
+            st.write("Your resume (NLTK):", resultat)
+        if st.button("TEXT_RANK MODEL"):
+            resultat = summarizer_textrank(texte_utilisateur)
+            st.write("Your resume (TextRank):", resultat)
 
-    if st.button("LSA MODEL"):
-        resultat = summarizer_lsa(texte_utilisateur)
-        st.write("Your resume (LSA):", resultat)
+        if st.button("LEX_RANK MODEL"):
+            resultat = summarizer_lexrank(texte_utilisateur)
+            st.write("Your Resume (LexRank):", resultat)
 
-if st.button("French"):
-    texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
-    if st.button("MODELE NLTK"):
-        resultat = french_summarizer_nltk(texte_utilisateur)
-        st.write("Votre resumé (NLTK):", resultat)
-    if st.button("MODELE TEXT_RANK"):
-        resultat = french_summarizer_textrank(texte_utilisateur)
-        st.write("Votre resumé (TextRank):", resultat)
+        if st.button("LSA MODEL"):
+            resultat = summarizer_lsa(texte_utilisateur)
+            st.write("Your resume (LSA):", resultat)
 
-    if st.button("MODELE LEX_RANK"):
-        resultat = french_summarizer_lexrank(texte_utilisateur)
-        st.write("Votre resumé (LexRank):", resultat)
+with col2:
+    if st.button("French"):
+        texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
+        if st.button("MODELE NLTK"):
+            resultat = french_summarizer_nltk(texte_utilisateur)
+            st.write("Votre resumé (NLTK):", resultat)
+        if st.button("MODELE TEXT_RANK"):
+            resultat = french_summarizer_textrank(texte_utilisateur)
+            st.write("Votre resumé (TextRank):", resultat)
 
-    if st.button("MODELE LSA"):
-        resultat = french_summarizer_lsa(texte_utilisateur)
-        st.write("Votre resumé (LSA):", resultat)
+        if st.button("MODELE LEX_RANK"):
+            resultat = french_summarizer_lexrank(texte_utilisateur)
+            st.write("Votre resumé (LexRank):", resultat)
+
+        if st.button("MODELE LSA"):
+            resultat = french_summarizer_lsa(texte_utilisateur)
+            st.write("Votre resumé (LSA):", resultat)
