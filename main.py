@@ -29,6 +29,7 @@ with col1:
     if st.button("NLTK MODEL"):
         resultat = summarizer_nltk(texte_utilisateur)
         #st.write("Your resume (NLTK):", resultat)
+    
 
 
     if st.button("TEXT_RANK MODEL"):
@@ -70,6 +71,5 @@ with col2:
 
 st.markdown("Votre résumé :")
 
-st.write(resultat)
-
+st.text_input(resultat)
 
