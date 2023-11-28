@@ -3,12 +3,11 @@ from PIL import Image
 import base64
 
 
-from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summarizer_nltk, set_background
+from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summarizer_nltk, background
 
 
 
-set_background('./back.jpg')
-
+background('./back.jpg')
 
 
 st.title("Summarization Application")
