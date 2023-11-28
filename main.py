@@ -29,38 +29,53 @@ with col1:
     if st.button("NLTK MODEL"):
         resultat = summarizer_nltk(texte_utilisateur)
         #st.write("Your resume (NLTK):", resultat)
+        st.text_area(resultat)
+
 
     if st.button("TEXT_RANK MODEL"):
         resultat = summarizer_textrank(texte_utilisateur)
         #st.write("Your resume (TextRank):", resultat)
+        st.text_area(resultat)
+
 
     if st.button("LEX_RANK MODEL"):
         resultat = summarizer_lexrank(texte_utilisateur)
         #st.write("Your Resume (LexRank):", resultat)
+        st.text_area(resultat)
+
 
     if st.button("LSA MODEL"):
         resultat = summarizer_lsa(texte_utilisateur)
         #st.write("Your resume (LSA):", resultat)
+        st.text_area(resultat)
+
 
 with col2:
     st.markdown("Modèle pour texte en français:")
     if st.button("MODELE NLTK"):
         resultat = french_summarizer_nltk(texte_utilisateur)
         #st.write("Votre resumé (NLTK):", resultat)
+        st.text_area(resultat)
+
 
     if st.button("MODELE TEXT_RANK"):
         resultat = french_summarizer_textrank(texte_utilisateur)
         #st.write("Votre resumé (TextRank):", resultat)
+        st.text_area(resultat)
+
 
     if st.button("MODELE LEX_RANK"):
         resultat = french_summarizer_lexrank(texte_utilisateur)
         #st.write("Votre resumé (LexRank):", resultat)
+        st.text_area(resultat)
+
 
     if st.button("MODELE LSA"):
         resultat = french_summarizer_lsa(texte_utilisateur)
         #st.write("Votre resumé (LSA):", resultat)
+        st.text_area(resultat)
+
 
 st.markdown("Votre résumé :")
 
-st.text_area(resultat)
 
