@@ -37,6 +37,8 @@ def background(image_file):
 
 texte_utilisateur = ""
 
+
+
 # Créer un text parser utilisant de tokenisation
 parser = PlaintextParser.from_string(texte_utilisateur, Tokenizer('english'))
 
@@ -81,7 +83,7 @@ def summarizer_nltk(texte_utilisateur, num_sentences=5):
 
     # Afficher le résumé
 
-    return summary_sentences
+    return summary
 
 
 def summarizer_textrank(texte_utilisateur, num_sentences=5):
