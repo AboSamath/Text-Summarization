@@ -74,5 +74,5 @@ with col2:
 
 st.markdown("Votre résumé :")
 
-st.text(resultat)
+st.write(resultat)
 
