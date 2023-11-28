@@ -25,40 +25,40 @@ texte_utilisateur = st.text_area("Kindly input the text you want to summarize:",
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("English", use_container_width=True):
-        if st.button("NLTK MODEL"):
-            resultat = summarizer_nltk(texte_utilisateur)
-            st.write("Your resume (NLTK):", resultat)
+    st.markdown("Models for English Text:")
+    if st.button("NLTK MODEL"):
+        resultat = summarizer_nltk(texte_utilisateur)
+        st.write("Your resume (NLTK):", resultat)
 
-        if st.button("TEXT_RANK MODEL"):
-            resultat = summarizer_textrank(texte_utilisateur)
-            st.write("Your resume (TextRank):", resultat)
+    if st.button("TEXT_RANK MODEL"):
+        resultat = summarizer_textrank(texte_utilisateur)
+        st.write("Your resume (TextRank):", resultat)
 
-        if st.button("LEX_RANK MODEL"):
-            resultat = summarizer_lexrank(texte_utilisateur)
-            st.write("Your Resume (LexRank):", resultat)
+    if st.button("LEX_RANK MODEL"):
+        resultat = summarizer_lexrank(texte_utilisateur)
+        st.write("Your Resume (LexRank):", resultat)
 
-        if st.button("LSA MODEL"):
-            resultat = summarizer_lsa(texte_utilisateur)
-            st.write("Your resume (LSA):", resultat)
+    if st.button("LSA MODEL"):
+        resultat = summarizer_lsa(texte_utilisateur)
+        st.write("Your resume (LSA):", resultat)
 
 with col2:
-    if st.button("French", use_container_width=True):
-        if st.button("MODELE NLTK"):
-            resultat = french_summarizer_nltk(texte_utilisateur)
-            st.write("Votre resumé (NLTK):", resultat)
+    st.markdown("Modèle pour texte en français:")
+    if st.button("MODELE NLTK"):
+        resultat = french_summarizer_nltk(texte_utilisateur)
+        st.write("Votre resumé (NLTK):", resultat)
 
-        if st.button("MODELE TEXT_RANK"):
-            resultat = french_summarizer_textrank(texte_utilisateur)
-            st.write("Votre resumé (TextRank):", resultat)
+    if st.button("MODELE TEXT_RANK"):
+        resultat = french_summarizer_textrank(texte_utilisateur)
+        st.write("Votre resumé (TextRank):", resultat)
 
-        if st.button("MODELE LEX_RANK"):
-            resultat = french_summarizer_lexrank(texte_utilisateur)
-            st.write("Votre resumé (LexRank):", resultat)
+    if st.button("MODELE LEX_RANK"):
+        resultat = french_summarizer_lexrank(texte_utilisateur)
+        st.write("Votre resumé (LexRank):", resultat)
 
-        if st.button("MODELE LSA"):
-            resultat = french_summarizer_lsa(texte_utilisateur)
-            st.write("Votre resumé (LSA):", resultat)
+    if st.button("MODELE LSA"):
+        resultat = french_summarizer_lsa(texte_utilisateur)
+        st.write("Votre resumé (LSA):", resultat)
 
 
 
