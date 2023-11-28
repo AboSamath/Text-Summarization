@@ -14,16 +14,15 @@ st.title("Summarization Application")
 
 st.markdown("This application is designed to help you get a fast, reliable summary of your text in English or French.")
 
-st.header('Please choose your text language !')
+st.header('Please input your text and choose the language !')
+
+texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
 
 # Choisir la langue
 #selected_language = st.selectbox("Please choose your language", ["English", "French"])
 
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
 col1, col2 = st.columns(2)
-
-texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
-
 
 with col1:
     if st.button("English", use_container_width=True):
