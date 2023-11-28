@@ -5,7 +5,7 @@ numpy
 matplotlib
 tensorflow
 bs4
-BeautifulSoup
+BeautifulSoup4
 requests
 re
 nltk
