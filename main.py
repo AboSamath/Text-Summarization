@@ -6,7 +6,7 @@ import base64
 from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summarizer_nltk
 
 def set_background(image_file):
-    with open(image_file, "bg") as f:
+    with open(image_file, "back") as f:
         img_data = f.read()
 
     b64_encoded = base64.b64encode(img_data).decode()
@@ -21,24 +21,24 @@ def set_background(image_file):
     st.markdown(style, unsafe_allow_html=True)
 
 
-st.title("Application de Summarization")
+st.title("Summarization Application")
 
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
-texte_utilisateur = st.text_area("Entrez le texte à résumer", "")
+texte_utilisateur = st.text_area("Kindly input the text you want to summarize", "")
 
-if st.button("Résumer Modèle NLTK Summarizer"):
+if st.button("NLTK MODEL"):
     resultat = summarizer_nltk(texte_utilisateur)
-    st.write("Résumé (NLTK Summarizer):", resultat)
+    st.write("Your resume (NLTK):", resultat)
 
 
-if st.button("Résumer Modèle TextRankSummarizer"):
+if st.button("TEXT_RANK MODEL"):
     resultat = summarizer_textrank(texte_utilisateur)
-    st.write("Résumé (TextRankSummarizer):", resultat)
+    st.write("Your resume (TextRank):", resultat)
 
-if st.button("Résumer Modèle LexRankSummarizer"):
+if st.button("LEX_RANK MODEL"):
     resultat = summarizer_lexrank(texte_utilisateur)
-    st.write("Résumé (LexRankSummarizer):", resultat)
+    st.write("Your Resume (LexRank):", resultat)
 
-if st.button("Résumer Modèle LsaSummarizer"):
+if st.button("LSA MODEL"):
     resultat = summarizer_lsa(texte_utilisateur)
-    st.write("Résumé (LsaSummarizer):", resultat)
+    st.write("Your resume (LSA):", resultat)
