@@ -26,7 +26,7 @@ button_key2 = "mon_bouton2"
 
 
 with col1:
-    if st.button("English", width=200):
+    if st.button("English", use_container_width=True):
         texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
         if st.button("NLTK MODEL"):
             resultat = summarizer_nltk(texte_utilisateur)
@@ -44,7 +44,7 @@ with col1:
             st.write("Your resume (LSA):", resultat)
 
 with col2:
-    if st.button("French", width=200):
+    if st.button("French", use_container_width=True):
         texte_utilisateur = st.text_area("Veuillez insérer le texte à résumer svp:", "")
         if st.button("MODELE NLTK"):
             resultat = french_summarizer_nltk(texte_utilisateur)
