@@ -14,7 +14,7 @@ st.title("Summarization Application")
 
 st.markdown("This application is designed to help you get a fast, reliable summary of your text in English or French.")
 
-st.header('Please input your text and choose the language !')
+st.markdown('### Please input your text and choose the language !')
 
 texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
 
