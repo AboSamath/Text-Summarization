@@ -10,8 +10,9 @@ from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summar
 background('./back.jpg')
 
 
-st.title('<h1 style="border: 2px solid #000; padding: 10px; text-align: center;">Summarization Application"</h1>', unsafe_allow_html=True)
+st.title('<h1 style="border: 2px solid #000; padding: 10px; text-align: center;">Summarization Application</h1>', unsafe_allow_html=True)
 
+#st.markdown('<h1 style="border: 2px solid #000; padding: 10px; text-align: center;">My Custom Title</h1>', unsafe_allow_html=True)
 
 st.markdown("This application is designed to help you get a fast, reliable summary of your text in English or French.")
 
