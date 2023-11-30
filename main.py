@@ -10,11 +10,12 @@ from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summar
 background('./back.jpg')
 
 
-st.title("Summarization Application")
+st.title('<h1 style="border: 2px solid #000; padding: 10px; text-align: center;">Summarization Application"</h1>', unsafe_allow_html=True)
+
 
 st.markdown("This application is designed to help you get a fast, reliable summary of your text in English or French.")
 
-st.markdown('### Please input your text and choose the language !')
+st.markdown('#### Please input your text and choose the prefered Model !')
 
 texte_utilisateur = st.text_area("Kindly input the text you want to summarize:", "")
 
