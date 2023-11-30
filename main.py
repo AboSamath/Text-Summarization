@@ -47,7 +47,7 @@ with col1:
 
 with col3:
     st.markdown("Modèle pour texte en français:")
-    if st.button("MODELE NLTK"):
+    if st.button("MODELE NLTK", style ='background-color: white, color:black, border: 2px solid #000; padding: 10px;'):
         resultat = french_summarizer_nltk(texte_utilisateur)
 
 
