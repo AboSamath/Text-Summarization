@@ -10,7 +10,9 @@ from util import summarizer_lexrank, summarizer_textrank, summarizer_lsa, summar
 background('./back.jpg')
 
 
-st.markdown('<h1 style="background-color: white; color: black; border: 8px solid white; padding: 15px; text-align: center">Summarization Application</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="background-color: white; color: orange; border: 8px solid orange; padding: 15px; text-align: center">Summarization Application</h1>', unsafe_allow_html=True)
+
+st.markdown("")
 
 st.markdown("")
 
