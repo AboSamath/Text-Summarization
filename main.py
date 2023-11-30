@@ -26,7 +26,7 @@ resultat = ""
 
 
 # Ajoutez des composants Streamlit pour interagir avec l'utilisateur
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("Models for English Text:")
@@ -45,7 +45,7 @@ with col1:
         resultat = summarizer_lsa(texte_utilisateur)
 
 
-with col2:
+with col3:
     st.markdown("Modèle pour texte en français:")
     if st.button("MODELE NLTK"):
         resultat = french_summarizer_nltk(texte_utilisateur)
